@@ -36,8 +36,8 @@ local set_groups = function()
     { hg = "Boolean", fg = c.yellow, cfg.boolean_style }, -- a boolean constant: TRUE, false
     { hg = "Float", fg = c.magenta }, -- a floating point constant: 2.3e10
     { hg = "Identifier", fg = c.fg, cfg.variable_style }, -- any variable name
-    { hg = "Function", fg = c.white, gui = cfg.function_style }, -- function name (also: methods for classes)
-    { hg = "Statement", fg = c.white }, -- any statement
+    { hg = "Function", fg = c.fg, gui = cfg.function_style }, -- function name (also: methods for classes)
+    { hg = "Statement", fg = c.fg }, -- any statement
     { hg = "Conditional", fg = c.blue }, -- if, then, else, endif, switch, etc.
     { hg = "Repeat", fg = c.blue }, -- for, do, while, etc.
     { hg = "Label", fg = c.blue }, -- case, default, etc.
@@ -49,7 +49,7 @@ local set_groups = function()
     { hg = "Define", fg = c.cyan }, -- preprocessor #define
     { hg = "Macro", fg = c.cyan }, -- same as Define
     { hg = "PreCondit", fg = c.cyan }, -- preprocessor #if, #else, #endif, etc.
-    { hg = "Type", fg = c.bright_blue }, -- int, long, char, etc.
+    { hg = "Type", fg = c.fg }, -- int, long, char, etc.
     { hg = "StorageClass", fg = c.yellow }, -- static, register, volatile, etc.
     { hg = "Structure", fg = c.yellow }, -- struct, union, enum, etc.
     { hg = "Typedef", fg = c.yellow }, -- A typedef
@@ -151,25 +151,21 @@ local set_groups = function()
 
     -- Tree sitter
     { hg = "@boolean", fg = c.yellow, gui = cfg.boolean_style },
-    { hg = "@constructor", fg = c.gray06 },
+    { hg = "@constructor", fg = c.fg },
     { hg = "@constant.builtin", fg = c.yellow },
-    { hg = "@namespace", fg = c.cyan, gui = "italic" },
-    { hg = "@parameter", fg = c.cyan },
-    { hg = "@property", fg = c.gray07 },
-    { hg = "@punctuation", fg = c.gray06 },
-    { hg = "@punctuation.delimiter", fg = c.gray06 },
-    { hg = "@punctuation.bracket", fg = c.gray06 },
-    { hg = "@symbol", fg = c.yellow },
+    { hg = "@namespace", fg = c.fg, gui = "italic" },
+    { hg = "@parameter", fg = c.fg },
+    { hg = "@property", fg = c.fg },
+    { hg = "@punctuation", fg = c.fg },
+    { hg = "@punctuation.delimiter", fg = c.fg },
+    { hg = "@punctuation.bracket", fg = c.fg },
+    { hg = "@symbol", fg = c.fg },
     { hg = "@tag", fg = c.cyan },
-    { hg = "@tag.attribute", fg = c.bright_blue, gui = "italic" },
-    { hg = "@tag.delimiter", fg = c.gray06 },
-    { hg = "@type.builtin", fg = c.magenta },
+    { hg = "@tag.attribute", fg = c.fg, gui = "italic" },
+    { hg = "@tag.delimiter", fg = c.fg },
+    { hg = "@type.builtin", fg = c.fg },
     { hg = "@variable", fg = c.fg, gui = cfg.variable_style },
-    { hg = "@variable.parameter", fg = c.cyan, gui = cfg.variable_style },
-    -- Tree sitter language specific overrides
-    { hg = "@constructor.javascript", fg = c.yellow },
-    { hg = "@keyword.clojure", fg = c.bright_cyan, gui = cfg.keyword_style },
-    { hg = "@keyword.function.clojure", fg = c.bright_cyan, gui = cfg.function_style },
+    { hg = "@variable.parameter", fg = c.fg, gui = cfg.variable_style },
 
     -- Diagnostics
     { hg = "DiagnosticError", fg = c.red },
