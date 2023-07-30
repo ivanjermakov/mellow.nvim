@@ -69,7 +69,7 @@ local set_groups = function()
         { hg = "Conceal" },                                                           -- placeholder characters substituted for concealed text (see 'conceallevel')
         { hg = "Cursor",                    fg = c.black,        bg = c.blue },       -- the character under the cursor
         { hg = "CursorIM" },                                                          -- like Cursor, but used when in IME mode
-        { hg = "CursorLine",                bg = c.gray03 },                          -- the screen line that the cursor is in when 'cursorline' is set
+        { hg = "CursorLine",                bg = c.gray02 },                          -- the screen line that the cursor is in when 'cursorline' is set
         { hg = "Directory",                 fg = c.blue },                            -- directory names (and other special names in listings)
         { hg = "DiffAdd",                   bg = c.green,        fg = c.black },      -- diff mode: Added line
         { hg = "DiffChange",                fg = c.yellow,       gui = "underline" }, -- diff mode: Changed line
@@ -109,8 +109,8 @@ local set_groups = function()
         { hg = "TabLineSel",                fg = c.white },                           -- tab pages line, active tab page label
         { hg = "Terminal",                  fg = c.fg,           bg = c.black },      -- terminal window (see terminal-size-color)
         { hg = "Title",                     fg = c.green },                           -- titles for output from " =set all", ":autocmd" etc.
-        { hg = "Visual",                    bg = c.gray04 },                          -- Visual mode selection
-        { hg = "VisualNOS",                 bg = c.gray04 },                          -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
+        { hg = "Visual",                    bg = c.gray03 },                          -- Visual mode selection
+        { hg = "VisualNOS",                 bg = c.gray03 },                          -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
         { hg = "WarningMsg",                fg = c.yellow },                          -- warning messages
         { hg = "WildMenu",                  fg = c.black,        bg = c.blue },       -- current match in 'wildmenu' completion
         { hg = "Winbar",                    fg = c.white,        bg = c.gray01 },     -- Winbar
