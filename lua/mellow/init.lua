@@ -28,68 +28,62 @@ end
 local set_groups = function()
     local highlights = {
         -- Syntax Groups (descriptions and ordering from `:h w18`)
-        { hg = "Comment",        fg = c.gray06 },     -- any comment
-        { hg = "Constant",       fg = c.white },      -- any constant
-        { hg = "String",         fg = c.green },      -- a string constant: "this is a string"
-        { hg = "Character",      fg = c.green },      -- a character constant: 'c', '\n'
-        { hg = "Number",         fg = c.yellow },     -- a number constant: 234, 0xff
-        { hg = "Boolean",        fg = c.yellow },     -- a boolean constant: TRUE, false
-        { hg = "Float",          fg = c.magenta },    -- a floating point constant: 2.3e10
-        { hg = "Identifier",     fg = c.fg },         -- any variable name
-        { hg = "Function",       fg = c.fg },         -- function name (also: methods for classes)
-        { hg = "Statement",      fg = c.fg },         -- any statement
-        { hg = "Conditional",    fg = c.blue },       -- if, then, else, endif, switch, etc.
-        { hg = "Repeat",         fg = c.blue },       -- for, do, while, etc.
-        { hg = "Label",          fg = c.blue },       -- case, default, etc.
-        { hg = "Operator",       fg = c.fg },         -- sizeof", "+", "*", etc.
-        { hg = "Keyword",        fg = c.blue },       -- any other keyword
-        { hg = "Exception",      fg = c.purple },     -- try, catch, throw
-        { hg = "PreProc",        fg = c.cyan },       -- generic Preprocessor
-        { hg = "Include",        fg = c.blue },       -- preprocessor #include
-        { hg = "Define",         fg = c.cyan },       -- preprocessor #define
-        { hg = "Macro",          fg = c.cyan },       -- same as Define
-        { hg = "PreCondit",      fg = c.cyan },       -- preprocessor #if, #else, #endif, etc.
-        { hg = "Type",           fg = c.fg },         -- int, long, char, etc.
-        { hg = "StorageClass",   fg = c.yellow },     -- static, register, volatile, etc.
-        { hg = "Structure",      fg = c.yellow },     -- struct, union, enum, etc.
-        { hg = "Typedef",        fg = c.yellow },     -- A typedef
-        { hg = "Special",        fg = c.blue },       -- any special symbol
-        { hg = "SpecialChar",    fg = c.yellow },     -- special character in a constant
-        { hg = "Tag",            fg = c.yellow },     -- you can use CTRL-] on this
-        { hg = "Delimiter" },                         -- character that needs attention
-        { hg = "SpecialComment", fg = c.gray07 },     -- special things inside a comment
-        { hg = "Debug" },                             -- debugging statements
-        { hg = "Underlined",     gui = "underline" }, -- text that stands out, HTML links
-        { hg = "Ignore" },                            -- left blank, hidden
-        { hg = "Error",          fg = c.red },        -- any erroneous construct
-        { hg = "Todo",           fg = c.yellow },     -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+        { hg = "Comment",                   fg = c.gray06 },     -- any comment
+        { hg = "Constant",                  fg = c.white },      -- any constant
+        { hg = "String",                    fg = c.green },      -- a string constant: "this is a string"
+        { hg = "Character",                 fg = c.green },      -- a character constant: 'c', '\n'
+        { hg = "Number",                    fg = c.yellow },     -- a number constant: 234, 0xff
+        { hg = "Boolean",                   fg = c.yellow },     -- a boolean constant: TRUE, false
+        { hg = "Float",                     fg = c.magenta },    -- a floating point constant: 2.3e10
+        { hg = "Identifier",                fg = c.fg },         -- any variable name
+        { hg = "Function",                  fg = c.fg },         -- function name (also: methods for classes)
+        { hg = "Statement",                 fg = c.fg },         -- any statement
+        { hg = "Conditional",               fg = c.blue },       -- if, then, else, endif, switch, etc.
+        { hg = "Repeat",                    fg = c.blue },       -- for, do, while, etc.
+        { hg = "Label",                     fg = c.blue },       -- case, default, etc.
+        { hg = "Operator",                  fg = c.fg },         -- sizeof", "+", "*", etc.
+        { hg = "Keyword",                   fg = c.blue },       -- any other keyword
+        { hg = "Exception",                 fg = c.purple },     -- try, catch, throw
+        { hg = "PreProc",                   fg = c.cyan },       -- generic Preprocessor
+        { hg = "Include",                   fg = c.blue },       -- preprocessor #include
+        { hg = "Define",                    fg = c.cyan },       -- preprocessor #define
+        { hg = "Macro",                     fg = c.cyan },       -- same as Define
+        { hg = "PreCondit",                 fg = c.cyan },       -- preprocessor #if, #else, #endif, etc.
+        { hg = "Type",                      fg = c.fg },         -- int, long, char, etc.
+        { hg = "StorageClass",              fg = c.yellow },     -- static, register, volatile, etc.
+        { hg = "Structure",                 fg = c.yellow },     -- struct, union, enum, etc.
+        { hg = "Typedef",                   fg = c.yellow },     -- A typedef
+        { hg = "Special",                   fg = c.blue },       -- any special symbol
+        { hg = "SpecialChar",               fg = c.yellow },     -- special character in a constant
+        { hg = "Tag",                       fg = c.yellow },     -- you can use CTRL-] on this
+        { hg = "Delimiter" },                                    -- character that needs attention
+        { hg = "SpecialComment",            fg = c.gray07 },     -- special things inside a comment
+        { hg = "Debug" },                                        -- debugging statements
+        { hg = "Underlined",                gui = "underline" }, -- text that stands out, HTML links
+        { hg = "Ignore" },                                       -- left blank, hidden
+        { hg = "Error",                     fg = c.red },        -- any erroneous construct
+        { hg = "Todo",                      fg = c.yellow },     -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
         -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
-        { hg = "ColorColumn",    bg = c.gray03 },                       -- used for the columns set with 'colorcolumn'
-        { hg = "Conceal" },                                             -- placeholder characters substituted for concealed text (see 'conceallevel')
-        { hg = "Cursor",         fg = c.black,     bg = c.blue },       -- the character under the cursor
-        { hg = "CursorIM" },                                            -- like Cursor, but used when in IME mode
-        { hg = "CursorLine",     bg = c.gray03 },                       -- the screen line that the cursor is in when 'cursorline' is set
-        { hg = "Directory",      fg = c.blue },                         -- directory names (and other special names in listings)
-        { hg = "DiffAdd",        bg = c.green,     fg = c.black },      -- diff mode: Added line
-        { hg = "DiffChange",     fg = c.yellow,    gui = "underline" }, -- diff mode: Changed line
-        { hg = "DiffDelete",     bg = c.red,       fg = c.black },      -- diff mode: Deleted line
-        { hg = "DiffText",       bg = c.yellow,    fg = c.black },      -- diff mode: Changed text within a changed line
-        { hg = "ErrorMsg",       fg = c.red },                          -- error messages on the command line
-        { hg = "VertSplit",      fg = c.gray02 },                       -- the column separating vertically split windows
-        { hg = "Folded",         fg = c.gray04 },                       -- line used for closed folds
-        { hg = "FoldColumn" },                                          --' foldcolumn'
-        { hg = "SignColumn" },                                          -- column where signs are displayed
-        { hg = "IncSearch",      fg = c.yellow,    bg = c.gray03 },     --' incsearch' highlighting; also used for the text replaced with ":s///c"
-        { hg = "LineNr",         fg = c.gray04 },                       -- Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-        { hg = "CursorLineNr" },                                        -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
-        {
-            hg = "MatchParen",
-            fg = c.yellow,
-            gui = "underline",
-            cterm =
-            "underline"
-        },                                                                            -- The character under the cursor or just before it, if it is a paired bracket, and its match.
+        { hg = "ColorColumn",               bg = c.gray03 },                          -- used for the columns set with 'colorcolumn'
+        { hg = "Conceal" },                                                           -- placeholder characters substituted for concealed text (see 'conceallevel')
+        { hg = "Cursor",                    fg = c.black,        bg = c.blue },       -- the character under the cursor
+        { hg = "CursorIM" },                                                          -- like Cursor, but used when in IME mode
+        { hg = "CursorLine",                bg = c.gray03 },                          -- the screen line that the cursor is in when 'cursorline' is set
+        { hg = "Directory",                 fg = c.blue },                            -- directory names (and other special names in listings)
+        { hg = "DiffAdd",                   bg = c.green,        fg = c.black },      -- diff mode: Added line
+        { hg = "DiffChange",                fg = c.yellow,       gui = "underline" }, -- diff mode: Changed line
+        { hg = "DiffDelete",                bg = c.red,          fg = c.black },      -- diff mode: Deleted line
+        { hg = "DiffText",                  bg = c.yellow,       fg = c.black },      -- diff mode: Changed text within a changed line
+        { hg = "ErrorMsg",                  fg = c.red },                             -- error messages on the command line
+        { hg = "VertSplit",                 fg = c.gray02 },                          -- the column separating vertically split windows
+        { hg = "Folded",                    fg = c.gray04 },                          -- line used for closed folds
+        { hg = "FoldColumn" },                                                        --' foldcolumn'
+        { hg = "SignColumn" },                                                        -- column where signs are displayed
+        { hg = "IncSearch",                 fg = c.yellow,       bg = c.gray03 },     --' incsearch' highlighting; also used for the text replaced with ":s///c"
+        { hg = "LineNr",                    fg = c.gray04 },                          -- Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+        { hg = "CursorLineNr" },                                                      -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+        { hg = "MatchParen",                fg = c.yellow, },                         -- The character under the cursor or just before it, if it is a paired bracket, and its match.
         { hg = "ModeMsg" },                                                           --' showmode' message (e.g., "-- INSERT --")
         { hg = "MoreMsg" },                                                           -- more-prompt
         { hg = "NonText",                   fg = c.gray02 },                          --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
