@@ -82,7 +82,7 @@ local set_groups = function()
         { hg = "SignColumn" },                                                        -- column where signs are displayed
         { hg = "IncSearch",                 fg = c.yellow,       bg = c.gray03 },     --' incsearch' highlighting; also used for the text replaced with ":s///c"
         { hg = "LineNr",                    fg = c.gray04 },                          -- Line number for " =number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-        { hg = "CursorLineNr" },                                                      -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+        { hg = "CursorLineNr",              fg = c.gray04 },                          -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
         { hg = "MatchParen",                fg = c.yellow, },                         -- The character under the cursor or just before it, if it is a paired bracket, and its match.
         { hg = "ModeMsg" },                                                           --' showmode' message (e.g., "-- INSERT --")
         { hg = "MoreMsg" },                                                           -- more-prompt
