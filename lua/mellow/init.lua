@@ -69,7 +69,7 @@ local set_groups = function()
         { hg = "Conceal" },                                                           -- placeholder characters substituted for concealed text (see 'conceallevel')
         { hg = "Cursor",                    fg = c.black,        bg = c.blue },       -- the character under the cursor
         { hg = "CursorIM" },                                                          -- like Cursor, but used when in IME mode
-        { hg = "CursorLine",                bg = c.gray02 },                          -- the screen line that the cursor is in when 'cursorline' is set
+        { hg = "CursorLine",                bg = c.gray01 },                          -- the screen line that the cursor is in when 'cursorline' is set
         { hg = "Directory",                 fg = c.blue },                            -- directory names (and other special names in listings)
         { hg = "DiffAdd",                   bg = c.green,        fg = c.black },      -- diff mode: Added line
         { hg = "DiffChange",                fg = c.yellow,       gui = "underline" }, -- diff mode: Changed line
