@@ -7,7 +7,7 @@ M.dark = {
   bg_dark = "#050505",
   -- Normal
   black = "#111111",
-  red = "#f5a191",
+  red = "#f57171",
   green = "#a6d189",
   yellow = "#e6b99d",
   blue = "#d3a8ef",
@@ -16,7 +16,7 @@ M.dark = {
   white = "#ffffff",
   -- Bright
   bright_black = "#353539",
-  bright_red = "#ffae9f",
+  bright_red = "#ff8e8f",
   bright_green = "#a6d189",
   bright_yellow = "#f0c5a9",
   bright_blue = "#d3a8ef",
