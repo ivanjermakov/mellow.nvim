@@ -184,10 +184,10 @@ local set_groups = function()
         { hg = "DiagnosticUnderlineHint",     fg = c.cyan,         gui = "underline" },
 
         -- Neovim's built-in language server client
-        { hg = "LspReferenceWrite",           fg = c.blue,         gui = "underline" },
-        { hg = "LspReferenceText",            fg = c.blue,         gui = "underline" },
-        { hg = "LspReferenceRead",            fg = c.blue,         gui = "underline" },
-        { hg = "LspSignatureActiveParameter", fg = c.yellow,       gui = "bold" },
+        { hg = "LspReferenceWrite",           bg = c.gray03 },
+        { hg = "LspReferenceText",            bg = c.gray03 },
+        { hg = "LspReferenceRead",            bg = c.gray03 },
+        { hg = "LspSignatureActiveParameter", bg = c.gray03 },
 
         -- GitSigns
         { hg = "GitSignsAdd",                 fg = c.green },
