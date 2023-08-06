@@ -178,10 +178,10 @@ local set_groups = function()
         { hg = "DiagnosticWarn",              fg = c.yellow },
         { hg = "DiagnosticInfo",              fg = c.blue },
         { hg = "DiagnosticHint",              fg = c.cyan },
-        { hg = "DiagnosticUnderlineError",    gui = "underline" },
-        { hg = "DiagnosticUnderlineWarn",     gui = "underline" },
-        { hg = "DiagnosticUnderlineInfo",     gui = "underline" },
-        { hg = "DiagnosticUnderlineHint",     gui = "underline" },
+        { hg = "DiagnosticUnderlineError",    gui = "undercurl",   guisp = c.red },
+        { hg = "DiagnosticUnderlineWarn",     gui = "undercurl",   guisp = c.yellow },
+        { hg = "DiagnosticUnderlineInfo",     gui = "undercurl",   guisp = c.blue },
+        { hg = "DiagnosticUnderlineHint",     gui = "undercurl",   guisp = c.cyan },
 
         -- Neovim's built-in language server client
         { hg = "LspReferenceWrite",           bg = c.gray03 },
