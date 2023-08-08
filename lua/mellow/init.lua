@@ -177,7 +177,7 @@ local set_groups = function()
         { hg = "DiagnosticError",             fg = c.red },
         { hg = "DiagnosticWarn",              fg = c.yellow },
         { hg = "DiagnosticInfo",              fg = c.blue },
-        { hg = "DiagnosticHint",              fg = c.cyan },
+        { hg = "DiagnosticHint",              fg = c.gray05 },
         { hg = "DiagnosticUnderlineError",    gui = "undercurl",   guisp = c.red },
         { hg = "DiagnosticUnderlineWarn",     gui = "undercurl",   guisp = c.yellow },
         { hg = "DiagnosticUnderlineInfo",     gui = "undercurl",   guisp = c.blue },
