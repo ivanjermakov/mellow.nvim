@@ -1,6 +1,8 @@
 # Mellow
 
-A soothing dark color scheme for neovim.
+A minimal dark color scheme for neovim.
+
+![image](https://github.com/ivanjermakov/mellow.nvim/assets/26609879/8f8afe66-e3f0-4501-b09a-69559a364c33)
 
 ## Installation
 
@@ -22,4 +24,3 @@ Enable the colorscheme:
 -- Lua
 vim.cmd [[colorscheme mellow]]
 ```
-
