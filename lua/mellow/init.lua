@@ -50,9 +50,9 @@ local set_groups = function()
         { hg = "Macro",                       fg = c.cyan },       -- same as Define
         { hg = "PreCondit",                   fg = c.cyan },       -- preprocessor #if, #else, #endif, etc.
         { hg = "Type",                        fg = c.fg },         -- int, long, char, etc.
-        { hg = "StorageClass",                fg = c.white },     -- static, register, volatile, etc.
+        { hg = "StorageClass",                fg = c.white },      -- static, register, volatile, etc.
         { hg = "Structure",                   fg = c.white },      -- struct, union, enum, etc.
-        { hg = "Typedef",                     fg = c.white },     -- A typedef
+        { hg = "Typedef",                     fg = c.white },      -- A typedef
         { hg = "Special",                     fg = c.cyan },       -- any special symbol
         { hg = "SpecialChar",                 fg = c.yellow },     -- special character in a constant
         { hg = "Tag",                         fg = c.yellow },     -- you can use CTRL-] on this
@@ -100,9 +100,9 @@ local set_groups = function()
         { hg = "SpellCap",                    fg = c.yellow },                         -- Word that should start with a capital. This will be combined with the highlighting used otherwise.
         { hg = "SpellLocal",                  fg = c.yellow },                         -- Word that is recognized by the spellchecker as one that is used in another region. This will be combined with the highlighting used otherwise.
         { hg = "SpellRare",                   fg = c.yellow },                         -- Word that is recognized by the spellchecker as one that is hardly ever used. spell This will be combined with the highlighting used otherwise.
-        { hg = "StatusLine",                  fg = c.white,       bg = c.gray01 },     -- status line of current window
-        { hg = "StatusLineNC",                fg = c.bg_dark },                        -- status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-        { hg = "StatusLineTerm",              fg = c.white,       bg = c.gray01 },     -- status line of current :terminal window
+        { hg = "StatusLine",                  fg = c.white, },                         -- status line of current window
+        { hg = "StatusLineNC",                fg = c.gray05 },                         -- status lines of not-current windows Note = if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+        { hg = "StatusLineTerm",              fg = c.white, },                         -- status line of current :terminal window
         { hg = "StatusLineTermNC",            fg = c.gray05 },                         -- status line of non-current  =terminal window
         { hg = "TabLine",                     fg = c.gray05 },                         -- tab pages line, not active tab page label
         { hg = "TabLineFill" },                                                        -- tab pages line, where there are no labels
