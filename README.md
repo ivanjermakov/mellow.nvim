@@ -24,3 +24,5 @@ vim.cmd [[colorscheme nellow]]
 ```
 
 ## Credit
+
+[mellow.nvim](https://github.com/mellow-theme/mellow.nvim)
