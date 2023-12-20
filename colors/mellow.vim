@@ -1,2 +1,2 @@
-lua package.loaded['mellow'] = nil
-lua require('mellow').colorscheme()
+lua package.loaded['nellow'] = nil
+lua require('nellow').colorscheme()
