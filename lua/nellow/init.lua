@@ -67,7 +67,7 @@ local set_groups = function()
         -- Highlighting Groups (descriptions and ordering from ` =h highlight-groups`) {{{
         { hg = "ColorColumn",                 bg = c.gray03 },                         -- used for the columns set with 'colorcolumn'
         { hg = "Conceal" },                                                            -- placeholder characters substituted for concealed text (see 'conceallevel')
-        { hg = "Cursor",                      fg = c.black,       bg = c.cyan },       -- the character under the cursor
+        { hg = "Cursor",                      fg = c.black,       bg = c.white },       -- the character under the cursor
         { hg = "CursorIM" },                                                           -- like Cursor, but used when in IME mode
         { hg = "CursorLine",                  bg = c.gray01 },                         -- the screen line that the cursor is in when 'cursorline' is set
         { hg = "Directory",                   fg = c.cyan },                           -- directory names (and other special names in listings)
