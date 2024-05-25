@@ -88,7 +88,7 @@ local set_groups = function()
         { hg = "MoreMsg" },                                                            -- more-prompt
         { hg = "NonText",                     fg = c.gray02 },                         --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
         { hg = "Normal",                      fg = c.fg,          bg = cfg.transparent and c.none or c.bg },
-        { hg = "NormalFloat",                 bg = c.gray01 },
+        { hg = "NormalFloat",                 bg = c.gray02 },
         { hg = "FloatBorder",                 fg = c.gray03 },
         { hg = "Pmenu",                       fg = c.white,       bg = c.black },      -- Popup menu: normal item.
         { hg = "PmenuSel",                    fg = c.white,       bg = c.gray03 },     -- Popup menu: selected item.
@@ -117,6 +117,7 @@ local set_groups = function()
         { hg = "WildMenu",                    fg = c.black,       bg = c.cyan },       -- current match in 'wildmenu' completion
         { hg = "Winbar",                      fg = c.white,       bg = c.gray01 },     -- Winbar
         { hg = "WinbarNC",                    fg = c.gray05,      bg = c.bg_dark },    -- Winbar non-current windows.
+        { hg = "WinSeparator",                fg = c.gray02 },
 
         -- Tree sitter
         { hg = "@boolean",                    fg = c.yellow,      gui = cfg.boolean_style },
